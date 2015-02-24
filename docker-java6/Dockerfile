@@ -12,3 +12,4 @@ rm -rf /var/cache/oracle-jdk6-installer
 
 # Set the environment variables
 ENV JAVA_HOME /usr/lib/jvm/java-6-oracle
+ENV PATH $JAVA_HOME/bin:$PATH
