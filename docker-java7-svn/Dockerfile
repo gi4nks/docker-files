@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM gi4nks/docker-java7
 MAINTAINER gi4nks "gnlc.lupo@gmail.com"
 
 # install additional libraries
