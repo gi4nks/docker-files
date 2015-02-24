@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM gi4nks/docker-java6
 MAINTAINER gi4nks "redacte@example.org"
 
 # install additional libraries
