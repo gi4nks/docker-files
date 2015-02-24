@@ -1,4 +1,4 @@
-FROM gi4nks/docker-java7-svn
+FROM gi4nks/docker-java7
 MAINTAINER gi4nks "redacte@example.org"
 
 ENV MAVEN_MAJOR_VERSION 3
