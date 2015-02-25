@@ -1,5 +1,4 @@
 FROM gi4nks/java7
-MAINTAINER gi4nks "gnlc.lupo@gmail.com"
 
 ENV MAVEN_MAJOR_VERSION 3
 ENV MAVEN_VERSION 3.2.5
