@@ -10,6 +10,9 @@ apt-get install -y oracle-java6-installer && \
 rm -rf /var/lib/apt/lists/* && \
 rm -rf /var/cache/oracle-jdk6-installer
 
+# remove download archive files
+RUN apt-get clean
+
 # Set the environment variables
 ENV JAVA_HOME /usr/lib/jvm/java-6-oracle
 ENV PATH $JAVA_HOME/bin:$PATH

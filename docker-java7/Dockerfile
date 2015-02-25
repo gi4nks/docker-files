@@ -10,6 +10,10 @@ apt-get install -y oracle-java7-installer && \
 rm -rf /var/lib/apt/lists/* && \
 rm -rf /var/cache/oracle-jdk7-installer
 
+
+# remove download archive files
+RUN apt-get clean
+
 # Set the environment variables
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 ENV PATH $JAVA_HOME/bin:$PATH

@@ -18,3 +18,6 @@ RUN echo libsvn1 hold | dpkg --set-selections
 RUN echo libserf1 hold | dpkg --set-selections
 RUN sed -i '$d' /etc/apt/sources.list
 RUN sed -i '$d' /etc/apt/sources.list
+
+# remove download archive files
+RUN apt-get clean
