@@ -18,4 +18,5 @@ echo libsvn1 hold | dpkg --set-selections && \
 echo libserf1 hold | dpkg --set-selections && \
 sed -i '$d' /etc/apt/sources.list && \
 sed -i '$d' /etc/apt/sources.list && \
+rm -rf /var/lib/apt/lists/* && \
 apt-get clean
