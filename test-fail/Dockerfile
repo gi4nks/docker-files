@@ -1,4 +1,4 @@
-FROM gi4nks/ubuntu:1.0
+FROM gi4nks/debian
 MAINTAINER gi4nks "gnlc.lupo@gmail.com"
 
 RUN mkdir /tmp/dir1

@@ -1,4 +1,4 @@
-FROM gi4nks/ubuntu
+FROM gi4nks/debian
 
 # Install Oracle Java 6.
 RUN \
