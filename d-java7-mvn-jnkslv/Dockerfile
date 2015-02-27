@@ -1,4 +1,4 @@
-FROM gi4nks/java7-mvn
+FROM gi4nks/d-java7-mvn
 
 # install additional libraries
 RUN apt-get update --fix-missing -q && \
