@@ -1,4 +1,4 @@
-FROM gi4nks/java7
+FROM gi4nks/d-java7
 
 ENV GRADLE_VERSION 2.3
 
