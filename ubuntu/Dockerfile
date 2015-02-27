@@ -28,7 +28,6 @@ rm -rf /var/lib/apt/lists/*
 # http://askubuntu.com/questions/453717/i-need-downgrade-from-subversion-1-8-to-subversion-1-7
 RUN echo "deb http://extras.ubuntu.com/ubuntu saucy main" >> /etc/apt/sources.list && \
 echo "deb http://de.archive.ubuntu.com/ubuntu/ saucy main universe restricted multiverse" >> /etc/apt/sources.list && \
-apt-get remove -y subversion libsvn1 && \
 apt-get update && \
 apt-get install -y subversion=1.7.9-1+nmu6ubuntu3 libsvn1=1.7.9-1+nmu6ubuntu3 && \
 echo subversion hold | dpkg --set-selections && \
