@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+dockerFROM ubuntu:14.04
 MAINTAINER gi4nks "gnlc.lupo@gmail.com"
 
 # --------------------------
@@ -22,7 +22,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update --fix-missing -q && \
 apt-get install -y -q unzip libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1 psmisc wget rake supervisor postfix telnet  libxml2-utils software-properties-common mlocate vim curl iotop sysstat htop nmon git && \
 apt-get install --only-upgrade bash && \
-rm -rf /var/lib/apt/lists/* 
+rm -rf /var/lib/apt/lists/*
 
 # Fix the subversion client to 1.7, cause the jenkins subversion plugin cannot read 1.8 checkouts
 # http://askubuntu.com/questions/453717/i-need-downgrade-from-subversion-1-8-to-subversion-1-7
