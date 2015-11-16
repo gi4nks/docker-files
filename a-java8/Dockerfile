@@ -1,4 +1,4 @@
-FROM gi4nks/a-base:latest
+FROM quay.io/gi4nks/a-base:latest
 
 # Install cURL
 RUN apk --update add curl ca-certificates tar && \
