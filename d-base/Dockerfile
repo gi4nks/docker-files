@@ -45,7 +45,7 @@ RUN npm install karma-cli -g && \
 RUN adduser --disabled-password --gecos "" yeoman && \
   echo "yeoman ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-RUN chown yeoman:yeoman /data
+RUN mkdir /data && chown yeoman:yeoman /data
 
 # Define working directory.
 WORKDIR /data
