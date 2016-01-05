@@ -21,7 +21,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # install additional libraries
 RUN apt-get update --fix-missing -yq && \
-apt-get install -yq git net-tools && \
+apt-get install -yq git net-tools vim && \
 rm -rf /var/lib/apt/lists/* && \
 apt-get clean
 
