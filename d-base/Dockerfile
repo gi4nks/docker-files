@@ -1,4 +1,5 @@
-FROM debian:jessie
+#FROM debian:jessie
+FROM node:5.3-slim
 MAINTAINER gi4nks "gnlc.lupo@gmail.com"
 
 # --------------------------
@@ -19,21 +20,18 @@ MAINTAINER gi4nks "gnlc.lupo@gmail.com"
 ENV DEBIAN_FRONTEND noninteractive
 
 # install additional libraries
-RUN apt-get update --fix-missing -q && \
-apt-get install -y -q unzip libc6-i386 lib32stdc++6 lib32gcc1 lib32ncurses5 lib32z1 psmisc wget rake supervisor postfix telnet subversion \
-                      libxml2-utils software-properties-common mlocate vim curl iotop sysstat htop nmon python-software-properties \
-                      git libxrender-dev libxtst-dev libfontconfig1 procps net-tools tcpdump htop lsof && \
-apt-get install --only-upgrade bash && \
+RUN apt-get update --fix-missing -yq && \
+apt-get install -yq git net-tools && \
 rm -rf /var/lib/apt/lists/* && \
 apt-get clean
 
 # Note the new setup script name for Node.js v0.12
-RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
+#RUN curl -sL https://deb.nodesource.com/setup_4.x | bash -
 
 # Then install with:
-RUN apt-get install -y nodejs && \
-  rm -rf /var/lib/apt/lists/* && \
-  apt-get clean
+#RUN apt-get install -y nodejs && \
+#  rm -rf /var/lib/apt/lists/* && \
+#  apt-get clean
   
 # Installing needed npm packages
 RUN npm install karma-cli -g && \
