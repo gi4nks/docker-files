@@ -1,16 +1,16 @@
-# Firefox over VNC
-#
-# VERSION               0.3
+FROM ubuntu:14.04
 
-FROM ubuntu
+RUN apt-get update && apt-get install -y firefox
 
-# Install vnc, xvfb in order to create a 'fake' display and firefox
-RUN apt-get update && apt-get install -y x11vnc xvfb firefox
-RUN mkdir ~/.vnc
-# Setup a password
-RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
-# Autostart firefox (might not be the best way, but it does the trick)
-RUN bash -c 'echo "firefox" >> /.bashrc'
+# Replace 1000 with your user / group id
+RUN export uid=1000 gid=1000 && \
+    mkdir -p /home/developer && \
+    echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
+    echo "developer:x:${uid}:" >> /etc/group && \
+    echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
+    chmod 0440 /etc/sudoers.d/developer && \
+    chown ${uid}:${gid} -R /home/developer
 
-EXPOSE 5900
-CMD    ["x11vnc", "-forever", "-usepw", "-create"]
+USER developer
+ENV HOME /home/developer
+CMD /usr/bin/firefox
