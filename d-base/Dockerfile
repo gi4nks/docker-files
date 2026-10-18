@@ -1,6 +1,5 @@
 #FROM debian:jessie
 FROM node:5.3-slim
-MAINTAINER gi4nks "redacte@example.org"
 
 # --------------------------
 # Debian:jessie

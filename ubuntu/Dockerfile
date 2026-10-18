@@ -1,5 +1,4 @@
 dockerFROM ubuntu:14.04
-MAINTAINER gi4nks "redacte@example.org"
 
 # --------------------------
 # Ubuntu:14.04

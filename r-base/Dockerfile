@@ -1,5 +1,4 @@
 FROM registry.access.redhat.com/rhel:latest
-MAINTAINER Project Owner "redacte@example.org"
 
 RUN yum install vim
 

@@ -1,5 +1,4 @@
 FROM debian:wheezy
-MAINTAINER gi4nks "redacte@example.org"
 
 # --------------------------
 # Debian:wheezy

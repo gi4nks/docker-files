@@ -1,5 +1,4 @@
 FROM gi4nks/ubuntu:1.0
-MAINTAINER gi4nks "redacte@example.org"
 
 RUN mkdir /tmp/dir1
 RUN mkdir /tmp/dir2
